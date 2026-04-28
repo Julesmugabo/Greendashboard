@@ -793,9 +793,10 @@ def chart_cumulative(month, project, category):
         yaxis="y2",
         hovertemplate="%{x}<br>Cumulative: RWF %{y:.2f}M<extra></extra>",
     ))
+    layout = chart_layout("Monthly vs Cumulative Spend (RWF M)")
+    layout["yaxis"]["title"] = "Monthly (RWF M)"
     fig.update_layout(
-        **chart_layout("Monthly vs Cumulative Spend (RWF M)"),
-        yaxis_title="Monthly (RWF M)",
+        **layout,
         yaxis2=dict(
             title="Cumulative (RWF M)",
             overlaying="y", side="right",
