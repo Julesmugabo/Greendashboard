@@ -169,7 +169,7 @@ app.layout = html.Div(
             },
             children=[
                 html.Div([
-                    html.Span("🌿 ", style={"fontSize": "28px"}),
+                    html.Img(src="/asset/logo.png", style={"height": "60px", "marginRight": "20px"}),
                     html.Span("GreenStars Financial Dashboard", style={
                         "color": C["text_main"], "fontWeight": "800",
                         "fontSize": "22px", "letterSpacing": "0.5px",
