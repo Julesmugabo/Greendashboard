@@ -677,12 +677,9 @@ def chart_top_accounts(month, project, category):
         textfont=dict(color=C["text_muted"], size=10),
         hovertemplate="%{y}<br>RWF %{x:.2f}M<extra></extra>",
     ))
-    fig.update_layout(
-        **chart_layout("Top 12 Expense Accounts (RWF Millions)"),
-        xaxis_title="RWF (Millions)",
-        height=400,
-        yaxis=dict(tickfont=dict(size=10, color=C["text_muted"])),
-    )
+    layout = chart_layout("Top 12 Expense Accounts (RWF Millions)")
+    layout["yaxis"]["tickfont"] = dict(size=10, color=C["text_muted"])
+    fig.update_layout(**layout, xaxis_title="RWF (Millions)", height=400)
     return fig
 
 
@@ -765,8 +762,8 @@ def chart_overhead_tree(month, project, category):
         hovertemplate="<b>%{label}</b><br>%{customdata}<extra></extra>",
         customdata=[fmt_rwf(v) for v in by_acc["Amount (RWF)"]],
     ))
-    fig.update_layout(**chart_layout("Overhead Cost Breakdown (Treemap)"), height=360,
-                      margin=dict(l=10, r=10, t=40, b=10))
+    fig.update_layout(**chart_layout("Overhead Cost Breakdown (Treemap)"), height=360)
+    fig.update_layout(margin=dict(l=10, r=10, t=40, b=10))
     return fig
 
 
