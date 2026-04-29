@@ -1,4 +1,4 @@
-# 🌿 GreenStars Financial Dashboard 2026
+# Financial Dashboard 2026
 
 Interactive financial intelligence dashboard built with Plotly Dash.  
 Colour palette: **Dark Green + Gold/Amber** — GreenStars brand identity.
